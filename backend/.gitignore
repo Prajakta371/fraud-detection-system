@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+test_sample.csv
+test_with_fraud.csv
+creditcard.csv/
+.env
