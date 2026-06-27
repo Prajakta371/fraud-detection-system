@@ -2,6 +2,13 @@
 
 A production-ready fraud detection system that analyzes bank transactions and flags fraudulent ones in real-time using Machine Learning.
 
+## 🌐 Live Demo
+👉 **[Try FraudShield Live](https://prajakta371.github.io/fraud-detection-system)**
+
+> Note: First load may take 30 seconds as the free server wakes up.
+
+**API:** https://fraud-detection-system-jyak.onrender.com
+
 ## 🔍 What it does
 Upload a CSV of bank transactions and FraudShield instantly detects fraud with confidence scores, risk levels, and explainable AI (SHAP).
 
@@ -21,23 +28,17 @@ Upload a CSV of bank transactions and FraudShield instantly detects fraud with c
 ## 🚀 How to Run
 
 ### 1. Install dependencies
-\```bash
 pip install fastapi uvicorn xgboost scikit-learn imbalanced-learn shap joblib python-multipart pandas numpy
-\```
 
 ### 2. Start the backend
-\```bash
 python -m uvicorn backend.main:app --reload
-\```
 
 ### 3. Open the frontend
-\```bash
 cd frontend && python -m http.server 3000
-\```
-Go to `http://localhost:3000`
+
+Go to http://localhost:3000
 
 ## 📁 Project Structure
-\```
 fraud-detection-system/
 ├── backend/
 │   ├── main.py              
@@ -47,4 +48,3 @@ fraud-detection-system/
 ├── frontend/
 │   └── index.html           
 └── fraud_detection_model.ipynb
-\```
