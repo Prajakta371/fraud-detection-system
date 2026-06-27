@@ -6,9 +6,11 @@ import numpy as np
 import joblib
 import json
 import io
+import os
 
-model = joblib.load("backend/fraud_model.pkl")
-with open("backend/threshold.json") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(BASE_DIR, "fraud_model.pkl"))
+with open(os.path.join(BASE_DIR, "threshold.json")) as f:
     threshold = json.load(f)["threshold"]
 
 app = FastAPI(
