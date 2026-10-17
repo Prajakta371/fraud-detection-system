@@ -48,3 +48,15 @@ fraud-detection-system/
 ├── frontend/
 │   └── index.html           
 └── fraud_detection_model.ipynb
+
+
+## Run with Docker
+
+Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+```
+docker build -t fraud-detection .
+docker run -p 8000:8000 fraud-detection
+```
+
+Then open http://localhost:8000/docs and upload a CSV (for example, one with the same columns as the training data) to `POST /batch-predict`.
